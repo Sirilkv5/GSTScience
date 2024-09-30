@@ -237,16 +237,16 @@ def evaluate_model(model, df_X_train, df_Y_train, df_X_test, df_Y_test):
     train_mse = mean_squared_error(df_Y_train.squeeze(), train_pred)
     train_rmse = sqrt(train_mse)
     
-    #print(f'Linear Train MSE: {train_mse:.4f}')
-    #print(f'Linear Train RMSE: {train_rmse:.4f}\n')
+    print(f'Linear Train MSE: {train_mse:.4f}')
+    print(f'Linear Train RMSE: {train_rmse:.4f}\n')
      
     # Evaluate performance on test set using MSE and RMSE 
     test_pred=model.predict(df_X_test)
     test_mse=mean_squared_error(df_Y_test.squeeze(),test_pred)
     testrmse=sqrt(test_mse)
 
-    #print(f"Linear Test mse:{test_mse:.4f}")
-    #print(f"Linear Test rmse:{testrmse:.4f}\n")
+    print(f"Linear Test mse:{test_mse:.4f}")
+    print(f"Linear Test rmse:{testrmse:.4f}\n")
 
     # Model Performance On All Sets 
     predictions=model.predict(df_X_test)
@@ -300,7 +300,7 @@ def main():
     loaded_model = load_combined_models('cboost_model.json')
 
        
-    # Make predictions on new data - a separate inference dataset
+    # Make predictions on new data (assuming you have a separate inference dataset)
     df_X_inference = pd.read_csv('data/X_Train_Data_Inference.csv')
     df_Y_inference = pd.read_csv('data/Y_Train_Data_Inference.csv')
     
