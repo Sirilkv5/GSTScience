@@ -69,7 +69,7 @@ Project Link: https://github.com/Sirilkv5/GSTScience
 Contributors names and contact info
 
 * Sirilakshmi - https://github.com/Sirilkv5
-* Venugopala - 
+* Venugopala - https://github.com/princvenu-code
 
 
 ## Version History
