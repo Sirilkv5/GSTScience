@@ -36,9 +36,9 @@ def load_data():
         tuple: DataFrames containing training features (X), testing features (X), 
                training targets (Y), and testing targets (Y).
     """
-    df_X_train = pd.read_csv('data/X_Train_Data_Input_Inf.csv')
+    df_X_train = pd.read_csv('data/X_Train_Data_Input.csv')
     df_X_test = pd.read_csv('data/X_Test_Data_Input.csv')
-    df_Y_train = pd.read_csv('data/Y_Train_Data_Target_Inf.csv')
+    df_Y_train = pd.read_csv('data/Y_Train_Data_Target.csv')
     df_Y_test = pd.read_csv('data/Y_Test_Data_Target.csv')
     print(df_X_train.shape,df_X_test.shape, df_Y_train.shape,df_Y_test.shape)
 
@@ -301,8 +301,8 @@ def main():
 
        
     # Make predictions on new data - a separate inference dataset
-    df_X_inference = pd.read_csv('data/X_Train_Data_Inference.csv')
-    df_Y_inference = pd.read_csv('data/Y_Train_Data_Inference.csv')
+    df_X_inference = pd.read_csv('data/X_Train_Data_Input_Inference.csv')
+    df_Y_inference = pd.read_csv('data/Y_Train_Data_Target_Inference.csv')
     
     Xinference=  df_X_inference.drop(columns=['ID'])
     Yinference=  df_Y_inference.drop(columns=['ID'])
