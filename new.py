@@ -237,8 +237,7 @@ def evaluate_model(model, df_X_train, df_Y_train, df_X_test, df_Y_test):
     train_mse = mean_squared_error(df_Y_train.squeeze(), train_pred)
     train_rmse = sqrt(train_mse)
     
-    #print(f'Linear Train MSE: {train_mse:.4f}')
-    #print(f'Linear Train RMSE: {train_rmse:.4f}\n')
+
      
     # Evaluate performance on test set using MSE and RMSE 
     test_pred=model.predict(df_X_test)
@@ -262,9 +261,10 @@ def evaluate_model(model, df_X_train, df_Y_train, df_X_test, df_Y_test):
     F1=f1_score(df_Y_test,predictions)
     recall=recall_score(df_Y_test,predictions)
     precision=precision_score(df_Y_test,predictions)
+    print(f"Here is the detailed Evaluation Report:\n\n")
     print(f"F1 Score:{F1:.6f}")
     print(f"Recall:{recall:.6f}")
-    print(f"Precision:{precision:.6f}\n\n")
+    print(f"Precision:{precision:.6f}")
     print(f"train_auc:{train_auc:.6f}")
     print(f"test_auc:{test_auc:.6f}")
     print(f"accuracy:{accuracy:.6f}")
@@ -287,19 +287,23 @@ def main():
     # Preprocess data
     Xtrain, Xtest, Ytrain, Ytest = preprocess_data(df_X_train, df_X_test,df_Y_train,df_Y_test)
     
+     
     # Train model
-    #model = train_model(Xtrain,Ytrain)
-    model = train_model_cat(Xtrain,Ytrain)
-    
     # Save trained model
-    #save_model(model,'xgboost_model.json')
-    save_model(model,'cboost_model.json')
+    # this is for XGBoost model uncomment below lines to use this model
     
-    # Load saved model for inference
-    #loaded_model = load_models('xgboost_model.json')
-    loaded_model = load_combined_models('cboost_model.json')
-
-       
+    #model = train_model(Xtrain,Ytrain)
+    #save_model(model,'xgboost_model.json')
+    #loaded_model = load_models('xgboost_model.json') # Load saved model for inference
+    
+    
+    # this is for CATBoost model uncomment below lines to use this model
+    
+    model = train_model_cat(Xtrain,Ytrain)
+    save_model(model,'cboost_model.json')
+    loaded_model = load_combined_models('cboost_model.json')  # Load saved model for inference
+    
+           
     # Make predictions on new data - a separate inference dataset
     df_X_inference = pd.read_csv('data/X_Train_Data_Input_Inference.csv')
     df_Y_inference = pd.read_csv('data/Y_Train_Data_Target_Inference.csv')
