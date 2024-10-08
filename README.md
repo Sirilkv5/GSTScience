@@ -1,48 +1,50 @@
-# GSTScience
-this is for GST Science
 # Project Title
 
-Developing a Predictive Model in GST
+Developing a Predictive Model in GSTN
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+This project offers innovative AI and ML algorithms and solutions to address the challenge presented by GSTN using the provided dataset. This initiative is part of the GSTN hackathon, which aims to promote collaboration between academia and industry experts, driving the creation of effective and insightful solutions to enhance the GST analytics framework
 
 ## Getting Started
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* OS - Windows 10
+* IDE - Visual Studio (>1.92.2) or IntelliJ
+* Python > 3.12
+* Create data folder and add files for Train, Test, and Inference in below fashion
+
+  ![image](https://github.com/user-attachments/assets/c62977a5-2f7f-4d76-8d76-c8aff34165d3)
+
 
 ### Installing
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/Sirilkv5/GSTScience
    ```
+2. Install requirements.txt packages
+   ```sh
+   pip install -3 requirements.txt
+   ```
+ 
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+* Run below command
 ```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
+py new.py
 ```
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Sirilakshmi S  -
+Linkedin - https://www.linkedin.com/in/sirilakshmi-srinivasa-59859326/ 
+Email - sirilkv5@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: https://github.com/Sirilkv5/GSTScience
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -50,26 +52,19 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 Contributors names and contact info
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+* Sirilakshmi - https://github.com/Sirilkv5
+* Venugopala - 
+
 
 ## Version History
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
 * 0.1
     * Initial Release
 
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+
+* [catboost](https://catboost.ai/docs/concepts/python-reference_catboostclassifier)
+* [xgboost](https://xgboost.readthedocs.io/en/stable/)
+* [GSTN](https://github.com/GSTNIndia
