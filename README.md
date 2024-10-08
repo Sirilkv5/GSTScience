@@ -10,10 +10,10 @@ This project offers innovative AI and ML algorithms and solutions to address the
 
 ### Dependencies
 
-* OS - Windows 10
+* OS - Windows 11
 * IDE - Visual Studio (>1.92.2) or IntelliJ
 * Python > 3.12
-* Create data folder and add files for Train, Test, and Inference in below fashion
+* Please note:  dataset not available in github due to Large file Size, hence create data folder by your own and add files for Train, Test, and Inference set as shown below
 
   ![image](https://github.com/user-attachments/assets/c62977a5-2f7f-4d76-8d76-c8aff34165d3)
 
@@ -26,9 +26,25 @@ This project offers innovative AI and ML algorithms and solutions to address the
    ```
 2. Install requirements.txt packages
    ```sh
-   pip install -3 requirements.txt
+   pip install -r requirements.txt
    ```
- 
+3. Load data and ensure below code matches with the input files
+  ```sh
+  def load_data():
+  . . .
+   df_X_train = pd.read_csv('data/X_Train_Data_Input.csv')
+   df_X_test = pd.read_csv('data/X_Test_Data_Input.csv')
+   df_Y_train = pd.read_csv('data/Y_Train_Data_Target.csv')
+   df_Y_test = pd.read_csv('data/Y_Test_Data_Target.csv')
+  . . .
+
+ def main():
+ . . .
+    # Make predictions on new data - a separate inference dataset
+    df_X_inference = pd.read_csv('data/X_Train_Data_Input_Inference.csv')
+    df_Y_inference = pd.read_csv('data/Y_Train_Data_Target_Inference.csv')
+. . .
+ ```
 
 ### Executing program
 
